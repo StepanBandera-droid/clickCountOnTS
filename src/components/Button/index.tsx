@@ -1,6 +1,8 @@
 import { type ReactElement } from "react";
-const Button = (): ReactElement => {
-  return <button></button>;
+const Button: React.FC<{
+  onClick?: React.MouseEventHandler<HTMLElement>;
+}> = ({ onClick }): ReactElement => {
+  return <button onClick={onClick}></button>;
 };
 
 export default Button;
