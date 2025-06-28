@@ -4,6 +4,7 @@ import "./styles.css";
 import App from "./components/Application/index.tsx";
 
 createRoot(document.getElementById("root")!).render(
+  //Почему после ("root") должен стоять восклиц. знак?
   <StrictMode>
     <App />
   </StrictMode>

@@ -1,8 +1,11 @@
-import { type ReactElement } from "react";
-const Button: React.FC<{
-  onClick?: React.MouseEventHandler<HTMLElement>;
-}> = ({ onClick }): ReactElement => {
-  return <button onClick={onClick}></button>;
+interface ChildProps {
+  //Как в целом работают интерфейсы с функциональными компонентами?
+  children: string;
+  onClick: React.MouseEventHandler<HTMLElement>;
+}
+const Button: React.FC<ChildProps> = ({ onClick, children }) => {
+  //Почему свойства onClick и children обязательно должны быть внутри фигурных скобок при обращении к ним? И что такое IntrinsicAttributes?
+  return <button onClick={onClick}>{children}</button>;
 };
 
 export default Button;

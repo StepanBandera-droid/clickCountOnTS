@@ -8,20 +8,26 @@ import "./styles.css";
 const App = (): ReactElement => {
   const [count, setCount] = useState(0);
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     const newNumber = count + 1;
     setCount(newNumber);
+  };
+
+  const deleteCount = (): void => {
+    setCount(0);
   };
 
   return (
     <div>
       <Header />
       <div>
-        <Button onClick={handleClick} />
+        <Button onClick={handleClick}>Нажми!</Button>
         <p>Количество кликов: {count}</p>
       </div>
       <div>
-        <DeleteCount />
+        <DeleteCount onClick={deleteCount}>
+          Сбросить количество кликов
+        </DeleteCount>
       </div>
     </div>
   );
