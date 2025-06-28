@@ -27,11 +27,11 @@ const App = (): ReactElement => {
   };
 
   return (
-    <div>
+    <div className="container">
       <Header />
       <div>
         <Button onClick={handleClick}>Нажми!</Button>
-        <p>Количество кликов: {count}</p>
+        <p className="text-button">Количество кликов: {count}</p>
       </div>
       <div>
         <DeleteCount onClick={deleteCount}>
