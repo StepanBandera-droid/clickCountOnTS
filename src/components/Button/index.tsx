@@ -4,7 +4,7 @@ interface ChildProps {
   onClick: React.MouseEventHandler<HTMLElement>;
 }
 const Button: React.FC<ChildProps> = ({ onClick, children }) => {
-  //Почему свойства onClick и children обязательно должны быть внутри фигурных скобок при обращении к ним? И что такое IntrinsicAttributes?
+  //Почему свойства/параметры onClick и children обязательно должны быть внутри фигурных скобок при обращении к ним? И что такое IntrinsicAttributes?
   return <button onClick={onClick}>{children}</button>;
 };
 
